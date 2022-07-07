@@ -26,45 +26,74 @@
         <div class="container ms_centered-container place-b">
             <div class="row">
 
-                <div class="col-4 p-0">
-                    <div class="d-flex justify-content-between p-2 bgc-1 border-type-1 align-items-center h-60">
-                        <div>PLACEHOLDER</div>
-                        <div class="font-color-1">
-                            <i class="fa-solid fa-circle-notch pe-1"></i>
-                            <i class="fa-solid fa-message pe-1"></i>
-                            <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
-                        </div>
-                    </div>
-                    <div class="place-b h-80">NOTIFICATION</div>
-                    <div class="place-b h-40">SEARCH</div>
-                    <div id="contacts-list">
-                        <ul class="list-unstyled">
-                            <li class="d-flex justify-content-between p-2 ps-3 border-top">
-                                <img class="avatar-img w-10" src="./img/avatar_1.jpg" alt="avatar_1">
-                                <div class="w-80 ps-3">
-                                    <h6 class="m-0">NOME</h6>
-                                    <p class="font-color-1">Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="w-10">
-                                    <p class="font-color-1">12:00</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- Profile & Contacts List (LEFT SIDE) -->
+                    <div class="col-4 p-0">
 
-                <div class="col-8 p-0">
-                    <div class="d-flex justify-content-between p-2 bgc-1 border-type-1 align-items-center h-60">
-                        <div>PLACEHOLDER</div>
-                        <div class="font-color-1">
-                            <i class="fa-solid fa-magnifying-glass pe-1"></i>
-                            <i class="fa-solid fa-paperclip pe-1"></i>
-                            <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
+                        <div class="d-flex justify-content-between p-2 bgc-1 border-type-1 align-items-center h-60">
+                            <div>PLACEHOLDER</div>
+                            <div class="font-color-1">
+                                <i class="fa-solid fa-circle-notch pe-1"></i>
+                                <i class="fa-solid fa-message pe-1"></i>
+                                <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
+                            </div>
                         </div>
+
+                        <div class="place-b h-80 bgc-3 d-flex align-items-center ps-3">
+                            <div class="circle-icon"><i class="fa-solid fa-bell-slash"></i></div>
+                            <div class="w-80 ps-3">
+                                <h6 class="m-0">Ricevi notifiche di nuovi messaggi</h6>
+                                <a href="#">Attiva notifiche adesso</a>
+                            </div>
+                        </div>
+
+                        <div class="place-b h-40 bgc-1">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn bgc-2 rounded-start border-end" type="button"><i class="fa-solid fa-magnifying-glass pe-1"></i></button>
+                                </div>
+                                <input type="text" class="form-control rounded-end border-0" placeholder="Search or start a new chat" aria-label="" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+
+                        <div id="contacts-list">
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between p-2 ps-3 border-top">
+                                    <img class="avatar-img w-10" src="./img/avatar_1.jpg" alt="avatar_1">
+                                    <div class="w-80 ps-3">
+                                        <h6 class="m-0">NOME</h6>
+                                        <p class="font-color-1">Ultimo messaggio inviato</p>
+                                    </div>
+                                    <div class="w-10">
+                                        <p class="font-color-1">12:00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div id="chat" class="place-b">CHAT</div>
-                    <div class="h-60 place-b">INPUT MESSAGGIO</div>
-                </div>
+
+                <!-- Chat (RIGHT SIDE) -->
+                    <div class="col-8 p-0">
+
+                        <div class="d-flex justify-content-between p-2 bgc-1 border-type-1 align-items-center h-60">
+                            <div>PLACEHOLDER</div>
+                            <div class="font-color-1">
+                                <i class="fa-solid fa-magnifying-glass pe-1"></i>
+                                <i class="fa-solid fa-paperclip pe-1"></i>
+                                <i class="fa-solid fa-ellipsis-vertical pe-1"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat" class="place-b">CHAT</div>
+
+                        <div class="h-60 place-b bgc-4 d-flex justify-content-between">
+                            <div class="w-10">O</div>
+                            <input type="text" class="form-control rounded-end border-0" placeholder="Search or start a new chat" aria-label="" aria-describedby="basic-addon1">
+                            <div class="w-10">O</div>
+                        </div>
+
+                    </div>
+
             </div>
         </div>
 
