@@ -3,11 +3,58 @@
     --bg-color2 : #DADBD4;
     --bg-color3 : #FFF;
     --accent-color1 : #D5F9BA;
-    --acceent-color2 : #8EDAFC;
+    --accent-color2 : #8EDAFC;
+    --accent-color3 : #B1B1B1;
 }
 
 
-.bgc-1 {
-    background: linear-gradient(to bottom, var(--bg-color1) 15%, var(--bg-color2) 15% 85%);
+.body-bg {
+    background: linear-gradient(to bottom, var(--bg-color1) 140px, var(--bg-color2) 140px calc(100vh - 140px));
     height: 100vh;
+}
+
+.bgc-1 {
+    background-color: var(--bg-color2);
+}
+
+.border-type-1 {
+    border: 0.5px solid var(--accent-color3);
+}
+
+.font-color-1 {
+    color: var(--accent-color3);
+}
+
+.ms_centered-container {
+    height: 95vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h-60 {
+    height: 60px;
+}
+
+.h-80 {
+    height: 80px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+#contacts-list {
+    height: calc(95vh - 180px);
+}
+
+#chat {
+    height: calc(95vh - 120px);
+}
+
+
+/* TODO Da rimuovere */
+.place-b {
+    border: 1px solid red;
 }
