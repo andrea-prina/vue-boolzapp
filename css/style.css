@@ -57,7 +57,7 @@
     font-size: 1.5rem;
 }
 
-p, a, .chat-item, .form-control {
+p, a, .form-control {
     font-size: 0.75rem;
 }
 
@@ -103,6 +103,7 @@ p, a, .chat-item, .form-control {
     border-radius: 5px;
     background-color: var(--custom-color3);
     padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
 }
 
 .sent-message {
@@ -133,4 +134,8 @@ p, a, .chat-item, .form-control {
 
 .unstyled-link:hover {
     color: #000;
+}
+
+.chat-item p {
+    text-align: right;
 }
