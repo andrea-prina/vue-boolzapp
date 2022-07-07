@@ -33,6 +33,11 @@
     transform: translate(-50%, -50%);
 }
 
+p {
+    font-size: 0.75rem;
+}
+
+
 .h-60 {
     height: 60px;
 }
@@ -45,8 +50,21 @@
     height: 40px;
 }
 
+.w-10 {
+    width: 15%;
+}
+
+.w-80 {
+    width: 70%;
+}
+
 #contacts-list {
     height: calc(95vh - 180px);
+    background-color: var(--bg-color3);
+}
+
+#contacts-list li {
+    border-top: 1px solid var(--accent-color3);
 }
 
 #chat {
