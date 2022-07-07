@@ -57,15 +57,15 @@
     font-size: 1.5rem;
 }
 
-p, a, .form-control {
+p, a, .col-4 .form-control {
     font-size: 0.75rem;
 }
 
-.h-60 {
+.ms_h-60 {
     height: 60px;
 }
 
-.h-80 {
+.ms_h-80 {
     height: 80px;
 }
 
@@ -103,15 +103,13 @@ p, a, .form-control {
     border-radius: 5px;
     background-color: var(--custom-color3);
     padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .sent-message {
     align-self: end;
     background-color: var(--custom-color6);
 }
-
-
 
 .small-icon {
     height: 40px;

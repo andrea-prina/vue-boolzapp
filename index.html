@@ -29,7 +29,7 @@
                 <!-- Profile & Contacts List (LEFT SIDE) -->
                     <div class="col-4 p-0">
 
-                        <div class="d-flex justify-content-between p-2 bgc-1 align-items-center h-60 border-end">
+                        <div class="d-flex justify-content-between p-2 bgc-1 align-items-center ms_h-60 border-end">
                             <div class="d-flex align-items-center">
                                 <!-- USER PROFILE PICTURE & NAME -->
                                 <img class="rounded-circle small-icon" src="./img/avatar_io.jpg" alt="avatar_1">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
 
-                        <div class=" h-80 bgc-3 d-flex align-items-center ps-3">
+                        <div class=" ms_h-80 bgc-3 d-flex align-items-center ps-3">
                             <div class="rounded-circle small-icon d-flex align-items-center justify-content-center" id="notification-icon"><i class="fa-solid fa-bell-slash"></i></div>
                             <div class="w-70 ps-3">
                                 <h6 class="m-0">Ricevi notifiche di nuovi messaggi</h6>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div id="contacts-list">
+                        <div id="contacts-list" class="overflow-scroll">
                             <ul class="list-unstyled">
                                 <!-- Dinamically create <li> elements based on the vue.js data -->
                                 <li v-for="contact in contacts" class="d-flex justify-content-between p-2 ps-3 border-top">
@@ -82,7 +82,7 @@
                 <!-- Chat (RIGHT SIDE) -->
                     <div class="col-8 p-0">
 
-                        <div class="d-flex justify-content-between p-2 bgc-1 align-items-center h-60">
+                        <div class="d-flex justify-content-between p-2 bgc-1 align-items-center ms_h-60">
                             <div>
                                 <div class="d-flex align-items-center">
                                     <!-- ACTIVE CHAT CONTACT | PROFILE PICTURE & NAME -->
@@ -101,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div id="chat" class="d-flex flex-column">
+                        <div id="chat" class="d-flex flex-column overflow-scroll">
                             <div class="chat-item">
                                 <h6 class="m-0">Ciao come stai? Oggi ho intenzione di andare al mare</h6>
                                 <p class="m-0 font-color-1">12:00</p>
@@ -115,12 +115,12 @@
                                 <p class="m-0 font-color-1">12:06</p>
                             </div>
                             <div class="chat-item">
-                                <h6 class="m-0">Ho intenzione di partire per le 9:00</h6>
+                                <h6 class="m-0">Ho intenzione di partire per le 14:00</h6>
                                 <p class="m-0 font-color-1">12:06</p>
                             </div>
                         </div>
 
-                        <div class="h-60 bgc-4 d-flex justify-content-between align-items-center">
+                        <div class="ms_h-60 bgc-4 d-flex justify-content-between align-items-center">
                             <div class="w-15 text-center"><a href="" class="unstyled-link font-color-2"><i class="fa-regular fa-face-smile f-icon"></i></a></div>
                             <input type="text" class="form-control rounded-end border-0" placeholder="Write a message" aria-label="" aria-describedby="basic-addon1">
                             <div class="w-15 text-center"><a href="" class="unstyled-link font-color-2"><i class="fa-solid fa-microphone f-icon font-color-2"></i></a></div>
