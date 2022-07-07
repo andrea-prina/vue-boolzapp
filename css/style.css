@@ -105,3 +105,11 @@ p, a {
     background-color: var(--custom-color3);
     color: var(--custom-color7);
 }
+
+.unstyled-link {
+    text-decoration: none;
+}
+
+.unstyled-link:hover {
+    color: var(--custom-color1);
+}
