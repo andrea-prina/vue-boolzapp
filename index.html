@@ -63,22 +63,11 @@
 
                         <div id="contacts-list">
                             <ul class="list-unstyled">
-                                <li class="d-flex justify-content-between p-2 ps-3 border-top">
-                                    <!-- CONTACT LIST | CONTACTS PROFILE PICTURE & NAME -->
-                                    <!-- TODO Dinamicizzare -->
-                                    <img class="rounded-circle large-icon w-15" src="./img/avatar_1.jpg" alt="avatar_1">
+                                <!-- Dinamically create <li> elements based on the vue.js data -->
+                                <li v-for="contact in contacts" class="d-flex justify-content-between p-2 ps-3 border-top">
+                                    <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" alt="avatar_1">
                                     <div class="w-70 ps-3">
-                                        <h6 class="m-0">NOME</h6>
-                                        <p class="font-color-1">Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="w-15">
-                                        <p class="font-color-1">12:00</p>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between p-2 ps-3 border-top">
-                                    <img class="rounded-circle large-icon w-15" src="./img/avatar_1.jpg" alt="avatar_1">
-                                    <div class="w-70 ps-3">
-                                        <h6 class="m-0">NOME</h6>
+                                        <h6 class="m-0">{{contact.name}}</h6>
                                         <p class="font-color-1">Ultimo messaggio inviato</p>
                                     </div>
                                     <div class="w-15">
@@ -126,6 +115,8 @@
         </div>
 
     </div>
+
+    <script src="./js/main.js"></script>
 
 </body>
 </html>
