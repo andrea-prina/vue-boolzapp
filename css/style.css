@@ -1,42 +1,19 @@
 :root {
-    --bg-color1 : #009688;
-    --bg-color2 : #DADBD4;
-    --bg-color3 : #FFF;
-    --bg-color4 : #EAEAEA;
-    --bg-color5 : #F3EEEA;
-    --accent-color1 : #D5F9BA;
-    --accent-color2 : #8EDAFC;
-    --accent-color3 : #B1B1B1;
+    --custom-color1 : #009688;
+    --custom-color2 : #DADBD4;
+    --custom-color3 : #FFF;
+    --custom-color4 : #EAEAEA;
+    --custom-color5 : #F3EEEA;
+    --custom-color6 : #D5F9BA;
+    --custom-color7 : #8EDAFC;
+    --custom-color8 : #B1B1B1;
 }
 
+/* TODO Scrollbar sempre visibile su contact list e chat */
 
 .body-bg {
-    background: linear-gradient(to bottom, var(--bg-color1) 140px, var(--bg-color2) 140px calc(100vh - 140px));
+    background: linear-gradient(to bottom, var(--custom-color1) 140px, var(--custom-color2) 140px calc(100vh - 140px));
     height: 100vh;
-}
-
-.bgc-1 {
-    background-color: var(--bg-color4);
-}
-
-.bgc-2 {
-    background-color: var(--bg-color3);
-}
-
-.bgc-3 {
-    background-color: var(--accent-color2);
-}
-
-.bgc-4 {
-    background-color: var(--bg-color5);
-}
-
-.border-type-1 {
-    border: 0.5px solid var(--accent-color3);
-}
-
-.font-color-1 {
-    color: var(--accent-color3);
 }
 
 .ms_centered-container {
@@ -47,14 +24,37 @@
     transform: translate(-50%, -50%);
 }
 
+.bgc-1 {
+    background-color: var(--custom-color4);
+}
+
+.bgc-2 {
+    background-color: var(--custom-color3);
+}
+
+.bgc-3 {
+    background-color: var(--custom-color7);
+}
+
+.bgc-4 {
+    background-color: var(--custom-color5);
+}
+
+.border-type-1 {
+    border: 0.5px solid var(--custom-color8);
+}
+
+.font-color-1 {
+    color: var(--custom-color8);
+}
+
+.f-icon {
+    font-size: 1.5rem;
+}
+
 p, a {
     font-size: 0.75rem;
 }
-
-input {
-    font-size: 0.5rem;
-}
-
 
 .h-60 {
     height: 60px;
@@ -79,11 +79,11 @@ input {
 
 #contacts-list {
     height: calc(95vh - 180px);
-    background-color: var(--bg-color3);
+    background-color: var(--custom-color3);
 }
 
 #contacts-list li {
-    border-top: 1px solid var(--accent-color3);
+    border-top: 1px solid var(--custom-color8);
 }
 
 #chat {
@@ -91,22 +91,17 @@ input {
     background-image: url(../img/mine.jpg);
 }
 
-.avatar-img, .circle-icon {
+.small-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.large-icon {
     height: 60px;
     width: 60px;
-    border-radius: 50%;
 }
 
-.circle-icon {
-    background-color: #FFF;
-    color: #8EDAFC;
-    font-size: 1.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* TODO Da rimuovere */
-.place-b {
-    border: 1px solid red;
+#notification-icon {
+    background-color: var(--custom-color3);
+    color: var(--custom-color7);
 }
