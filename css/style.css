@@ -52,7 +52,7 @@
     font-size: 1.5rem;
 }
 
-p, a {
+p, a, .chat-item {
     font-size: 0.75rem;
 }
 
@@ -89,7 +89,23 @@ p, a {
 #chat {
     height: calc(95vh - 120px);
     background-image: url(../img/mine.jpg);
+    padding: 2rem 6rem 1rem 6rem;
 }
+
+.chat-item {
+    width: 40%;
+    min-width: 10rem;
+    border-radius: 5px;
+    background-color: var(--custom-color3);
+    padding: 0.5rem 1rem;
+}
+
+.sent-message {
+    align-self: end;
+    background-color: var(--custom-color6);
+}
+
+
 
 .small-icon {
     height: 40px;

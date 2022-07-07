@@ -23,7 +23,7 @@
 
     <div id="app">
 
-        <div class="container ms_centered-container place-b">
+        <div class="container ms_centered-container ">
             <div class="row">
 
                 <!-- Profile & Contacts List (LEFT SIDE) -->
@@ -44,7 +44,7 @@
                             </div>
                         </div>
 
-                        <div class="place-b h-80 bgc-3 d-flex align-items-center ps-3">
+                        <div class=" h-80 bgc-3 d-flex align-items-center ps-3">
                             <div class="rounded-circle small-icon d-flex align-items-center justify-content-center" id="notification-icon"><i class="fa-solid fa-bell-slash"></i></div>
                             <div class="w-70 ps-3">
                                 <h6 class="m-0">Ricevi notifiche di nuovi messaggi</h6>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="place-b h-40 bgc-1">
+                        <div class=" h-40 bgc-1">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <button class="btn bgc-2 rounded-start border-end" type="button"><i class="fa-solid fa-magnifying-glass pe-1"></i></button>
@@ -101,9 +101,13 @@
                             </div>
                         </div>
 
-                        <div id="chat" class="place-b"></div>
+                        <div id="chat" class="d-flex flex-column">
+                            <div class="chat-item">TEST1</div>
+                            <div class="chat-item sent-message">TEST2</div>
+                            <div class="chat-item">TEST3</div>
+                        </div>
 
-                        <div class="h-60 place-b bgc-4 d-flex justify-content-between align-items-center">
+                        <div class="h-60 bgc-4 d-flex justify-content-between align-items-center">
                             <div class="w-15 text-center"><i class="fa-regular fa-face-smile f-icon"></i></div>
                             <input type="text" class="form-control rounded-end border-0" placeholder="Write a message" aria-label="" aria-describedby="basic-addon1">
                             <div class="w-15 text-center"><i class="fa-solid fa-microphone f-icon"></i></div>
