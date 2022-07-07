@@ -1,0 +1,13 @@
+:root {
+    --bg-color1 : #009688;
+    --bg-color2 : #DADBD4;
+    --bg-color3 : #FFF;
+    --accent-color1 : #D5F9BA;
+    --acceent-color2 : #8EDAFC;
+}
+
+
+.bgc-1 {
+    background: linear-gradient(to bottom, var(--bg-color1) 15%, var(--bg-color2) 15% 85%);
+    height: 100vh;
+}
