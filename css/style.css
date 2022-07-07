@@ -7,6 +7,7 @@
     --custom-color6 : #D5F9BA;
     --custom-color7 : #8EDAFC;
     --custom-color8 : #B1B1B1;
+    --custom-color9 : #6B7376;
 }
 
 /* TODO Scrollbar sempre visibile su contact list e chat */
@@ -48,11 +49,15 @@
     color: var(--custom-color8);
 }
 
+.font-color-2 {
+    color: var(--custom-color9);
+}
+
 .f-icon {
     font-size: 1.5rem;
 }
 
-p, a, .chat-item {
+p, a, .chat-item, .form-control {
     font-size: 0.75rem;
 }
 
@@ -64,8 +69,8 @@ p, a, .chat-item {
     height: 80px;
 }
 
-.h-40 {
-    height: 40px;
+.ms_h-45 {
+    height: 45px;
 }
 
 .w-15 {
@@ -78,7 +83,7 @@ p, a, .chat-item {
 
 
 #contacts-list {
-    height: calc(95vh - 180px);
+    height: calc(95vh - 185px);
     background-color: var(--custom-color3);
 }
 
@@ -127,5 +132,5 @@ p, a, .chat-item {
 }
 
 .unstyled-link:hover {
-    color: var(--custom-color1);
+    color: #000;
 }
