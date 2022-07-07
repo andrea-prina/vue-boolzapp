@@ -51,8 +51,14 @@
 
 #chat {
     height: calc(95vh - 120px);
+    background-image: url(../img/mine.jpg);
 }
 
+.avatar-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
 
 /* TODO Da rimuovere */
 .place-b {
