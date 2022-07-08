@@ -89,6 +89,7 @@ p, a, .col-4 .form-control {
 
 #contacts-list li {
     border-top: 1px solid var(--custom-color8);
+    cursor: pointer;
 }
 
 #chat {

@@ -169,6 +169,13 @@ const app = new Vue(
                     ],
                 }
             ],
+        },
+
+        methods : {
+
+            changeActiveIndex : function(selectedContactIndex){
+                this.activeContactIndex = selectedContactIndex;
+            }
         }
     }
 )
