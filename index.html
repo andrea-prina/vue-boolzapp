@@ -86,10 +86,9 @@
                             <div>
                                 <div class="d-flex align-items-center">
                                     <!-- ACTIVE CHAT CONTACT | PROFILE PICTURE & NAME -->
-                                    <!-- TODO Dinamicizzare -->
-                                    <img class="rounded-circle small-icon" src="./img/avatar_1.jpg" alt="avatar_1">
+                                    <img class="rounded-circle small-icon" :src="`./img/avatar${contacts[activeContactIndex].avatar}.jpg`" alt="avatar_1">
                                     <div class="ps-3">
-                                        <h6 class="m-0">NOME</h6>
+                                        <h6 class="m-0">{{contacts[activeContactIndex].name}}</h6>
                                         <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                                     </div>
                                 </div>
