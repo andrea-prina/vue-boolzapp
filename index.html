@@ -65,12 +65,12 @@
                         <div id="contacts-list" class="overflow-scroll">
                             <ul class="list-unstyled">
                                 <!-- Dinamically create <li> elements based on the vue.js data -->
-                                    <li v-for="(contact, index) in contacts" v-if="searchContact(index)" class="d-flex justify-content-between p-2 ps-3 border-top" :class="{active : index === activeContactIndex}" @click="changeActiveIndex(index)">
-                                        <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" :alt="'avatar${contact.avatar}'">
-                                        <!-- !FIXME: the "alt" property of avatar images is not displayed correctly  -->
+                                <li v-for="(contact, index) in contacts" v-if="searchContact(index)" class="d-flex justify-content-between p-2 ps-3 border-top" :class="{active : index === activeContactIndex}" @click="changeActiveIndex(index)">
+                                    <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" :alt="'avatar${contact.avatar}'">
+                                    <!-- !FIXME: the "alt" property of avatar images is not displayed correctly  -->
                                     <div class="w-70 ps-3">
                                         <h6 class="m-0">{{contact.name}}</h6>
-                                        <p class="font-color-1">Ultimo messaggio inviato</p>
+                                        <p class="font-color-1">{{contact.messages[contact.messages.length - 1].message}}</p>
                                     </div>
                                     <div class="w-15">
                                         <p class="font-color-1">12:00</p>
