@@ -179,8 +179,16 @@ const app = new Vue(
                 this.activeContactIndex = selectedContactIndex;
             },
 
-            logUserMessage : function(message){
-                console.log(message);
+            sendUserMessage : function(userMessage){
+                
+                const newMessage = {
+                    date: "TBD",
+                    message : userMessage,
+                    status : 'sent'
+                }
+
+                this.contacts[this.activeContactIndex].messages.push(newMessage);
+
                 this.userMessage = "";
             }
         }
