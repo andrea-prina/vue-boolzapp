@@ -183,9 +183,10 @@ const app = new Vue(
 
             sendUserMessage : function(userMessage){
                 
+                const sendingTimestamp = dayjs();
                 const newMessage = {
-                    // TODO: Add date dynamically
-                    date: "TBD",
+
+                    date: sendingTimestamp,
                     message : userMessage,
                     status : 'sent'
                 }
@@ -200,9 +201,11 @@ const app = new Vue(
             },
 
             sendAutoReply : function(){
+
+                const sendingTimestamp = dayjs();
                 const newMessage = {
-                    // TODO: Add date dynamically
-                    date: "TBD",
+
+                    date: sendingTimestamp,
                     message : "OK",
                     status : 'received'
                 }
@@ -226,6 +229,10 @@ const app = new Vue(
                 // IT IS ALSO POSSIBLE TO COMPLETELY REMOVE THE MESSAGE FROM THE CHAT USING:
                 // this.contacts[this.activeContactIndex].messages.splice(index, 1);
 
+            },
+
+            datetimeFormatToHourAndMinutes : function(datetime){
+                return dayjs(datetime).format("HH:mm")
             }
         }
     }
