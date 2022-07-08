@@ -182,6 +182,7 @@ const app = new Vue(
             sendUserMessage : function(userMessage){
                 
                 const newMessage = {
+                    // TODO: Add date dynamically
                     date: "TBD",
                     message : userMessage,
                     status : 'sent'
@@ -190,6 +191,22 @@ const app = new Vue(
                 this.contacts[this.activeContactIndex].messages.push(newMessage);
 
                 this.userMessage = "";
+
+                setTimeout(() => {
+                    this.sendAutoReply();
+                }, "1000")
+            },
+
+            sendAutoReply : function(){
+                const newMessage = {
+                    // TODO: Add date dynamically
+                    date: "TBD",
+                    message : "OK",
+                    status : 'received'
+                }
+
+                this.contacts[this.activeContactIndex].messages.push(newMessage);
+
             }
         }
     }
