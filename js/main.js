@@ -212,7 +212,9 @@ const app = new Vue(
             },
 
             searchContact : function(index){
-                return (this.contacts[index].name.startsWith(this.searchQuery));
+                const contactName = this.contacts[index].name.toLowerCase();
+                const searchedName = this.searchQuery.toLowerCase()
+                return (contactName.startsWith(searchedName));
             }
         }
     }
