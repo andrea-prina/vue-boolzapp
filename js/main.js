@@ -6,6 +6,8 @@ const app = new Vue(
 
             activeContactIndex : 2,
 
+            userMessage : "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -175,6 +177,11 @@ const app = new Vue(
 
             changeActiveIndex : function(selectedContactIndex){
                 this.activeContactIndex = selectedContactIndex;
+            },
+
+            logUserMessage : function(message){
+                console.log(message);
+                this.userMessage = "";
             }
         }
     }
