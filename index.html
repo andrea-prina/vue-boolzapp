@@ -58,14 +58,14 @@
                                 <div class="input-group-prepend">
                                     <button class="btn bgc-2 rounded-0 rounded-start border-end font-color-1" type="button"><i class="fa-solid fa-magnifying-glass pe-1"></i></button>
                                 </div>
-                                <input type="text" class="form-control rounded-end border-0" placeholder="Search or start a new chat" aria-label="" aria-describedby="basic-addon1">
+                                <input v-model="searchQuery" type="text" class="form-control rounded-end border-0" placeholder="Search or start a new chat" aria-label="" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         
                         <div id="contacts-list" class="overflow-scroll">
                             <ul class="list-unstyled">
                                 <!-- Dinamically create <li> elements based on the vue.js data -->
-                                    <li v-for="(contact, index) in contacts" class="d-flex justify-content-between p-2 ps-3 border-top" :class="{active : index === activeContactIndex}" @click="changeActiveIndex(index)">
+                                    <li v-for="(contact, index) in contacts" v-if="searchContact(index)" class="d-flex justify-content-between p-2 ps-3 border-top" :class="{active : index === activeContactIndex}" @click="changeActiveIndex(index)">
                                         <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" :alt="'avatar${contact.avatar}'">
                                         <!-- !FIXME: the "alt" property of avatar images is not displayed correctly  -->
                                     <div class="w-70 ps-3">

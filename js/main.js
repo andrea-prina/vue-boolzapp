@@ -4,9 +4,11 @@ const app = new Vue(
 
         data : {
 
-            activeContactIndex : 2,
+            activeContactIndex : 0,
 
             userMessage : "",
+
+            searchQuery : "",
 
             contacts: [
                 {
@@ -207,6 +209,10 @@ const app = new Vue(
 
                 this.contacts[this.activeContactIndex].messages.push(newMessage);
 
+            },
+
+            searchContact : function(index){
+                return (this.contacts[index].name.startsWith(this.searchQuery));
             }
         }
     }
