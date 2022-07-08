@@ -107,6 +107,10 @@ p, a, .col-4 .form-control {
     margin-bottom: 0.5rem;
 }
 
+#contacts-list li.active {
+    background-color: var(--custom-color4);
+}
+
 .sent-message {
     align-self: end;
     background-color: var(--custom-color6);

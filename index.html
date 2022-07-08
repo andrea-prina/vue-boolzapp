@@ -21,21 +21,22 @@
 </head>
 <body class="body-bg">
 
+    
     <div id="app">
-
+        
         <div class="container ms_centered-container ">
             <div class="row">
-
+                
                 <!-- Profile & Contacts List (LEFT SIDE) -->
-                    <div class="col-4 p-0">
-
-                        <div class="d-flex justify-content-between p-2 bgc-1 align-items-center ms_h-60 border-end">
-                            <div class="d-flex align-items-center">
-                                <!-- USER PROFILE PICTURE & NAME -->
-                                <img class="rounded-circle small-icon" src="./img/avatar_io.jpg" alt="avatar_1">
-                                <div class="ps-3">
-                                    <h6 class="m-0">Sofia</h6>
-                                </div>
+                <div class="col-4 p-0">
+                    
+                    <div class="d-flex justify-content-between p-2 bgc-1 align-items-center ms_h-60 border-end">
+                        <div class="d-flex align-items-center">
+                            <!-- USER PROFILE PICTURE & NAME -->
+                            <img class="rounded-circle small-icon" src="./img/avatar_io.jpg" alt="avatar_io">
+                            <div class="ps-3">
+                                <h6 class="m-0">Sofia</h6>
+                            </div>
                             </div>
                             <div>
                                 <a href="" class="unstyled-link font-color-1"><i class="fa-solid fa-circle-notch pe-3 f-icon"></i></a>
@@ -43,7 +44,7 @@
                                 <a href="" class="unstyled-link font-color-1"><i class="fa-solid fa-ellipsis-vertical pe-3 f-icon"></i></a>
                             </div>
                         </div>
-
+                        
                         <div class=" ms_h-80 bgc-3 d-flex align-items-center ps-3">
                             <div class="rounded-circle small-icon d-flex align-items-center justify-content-center" id="notification-icon"><i class="fa-solid fa-bell-slash"></i></div>
                             <div class="w-70 ps-3">
@@ -51,7 +52,7 @@
                                 <a class="font-color-2" href="#">Attiva notifiche adesso</a>
                             </div>
                         </div>
-
+                        
                         <div class=" ms_h-45 bgc-1 p-1">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -60,12 +61,13 @@
                                 <input type="text" class="form-control rounded-end border-0" placeholder="Search or start a new chat" aria-label="" aria-describedby="basic-addon1">
                             </div>
                         </div>
-
+                        
                         <div id="contacts-list" class="overflow-scroll">
                             <ul class="list-unstyled">
                                 <!-- Dinamically create <li> elements based on the vue.js data -->
-                                <li v-for="(contact, index) in contacts" class="d-flex justify-content-between p-2 ps-3 border-top" @click="changeActiveIndex(index)">
-                                    <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" alt="avatar_1">
+                                    <li v-for="(contact, index) in contacts" class="d-flex justify-content-between p-2 ps-3 border-top" :class="{active : index === activeContactIndex}" @click="changeActiveIndex(index)">
+                                        <img class="rounded-circle large-icon w-15" :src="`./img/avatar${contact.avatar}.jpg`" :alt="'avatar${contact.avatar}'">
+                                        <!-- !FIXME: the "alt" property of avatar images is not displayed correctly  -->
                                     <div class="w-70 ps-3">
                                         <h6 class="m-0">{{contact.name}}</h6>
                                         <p class="font-color-1">Ultimo messaggio inviato</p>
@@ -86,7 +88,8 @@
                             <div>
                                 <div class="d-flex align-items-center">
                                     <!-- ACTIVE CHAT CONTACT | PROFILE PICTURE & NAME -->
-                                    <img class="rounded-circle small-icon" :src="`./img/avatar${contacts[activeContactIndex].avatar}.jpg`" alt="avatar_1">
+                                    <img class="rounded-circle small-icon" :src="`./img/avatar${contacts[activeContactIndex].avatar}.jpg`" :alt="`avatar${contacts[activeContactIndex].avatar}`">
+                                    <!-- !FIXME: the "alt" property of avatar images is not displayed correctly  -->
                                     <div class="ps-3">
                                         <h6 class="m-0">{{contacts[activeContactIndex].name}}</h6>
                                         <p class="m-0">Ultimo accesso oggi alle 12:00</p>
