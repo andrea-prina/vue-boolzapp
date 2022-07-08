@@ -10,7 +10,7 @@
     --custom-color9 : #6B7376;
 }
 
-/* TODO Scrollbar sempre visibile su contact list e chat */
+/* TODO Improve chat element style */
 
 .body-bg {
     background: linear-gradient(to bottom, var(--custom-color1) 140px, var(--custom-color2) 140px calc(100vh - 140px));

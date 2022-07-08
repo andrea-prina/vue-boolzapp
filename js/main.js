@@ -4,7 +4,7 @@ const app = new Vue(
 
         data : {
 
-            activeContactIndex : 1,
+            activeContactIndex : 2,
 
             contacts: [
                 {

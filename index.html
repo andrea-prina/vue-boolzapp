@@ -101,21 +101,9 @@
                         </div>
 
                         <div id="chat" class="d-flex flex-column overflow-scroll">
-                            <div class="chat-item">
-                                <h6 class="m-0">Ciao come stai? Oggi ho intenzione di andare al mare</h6>
-                                <p class="m-0 font-color-1">12:00</p>
-                            </div>
-                            <div class="chat-item sent-message">
-                                <h6 class="m-0">Ottimo, posso venire anche io?</h6>
-                                <p class="m-0 font-color-1">12:05</p>
-                            </div>
-                            <div class="chat-item">
-                                <h6 class="m-0">Certo!!!!</h6>
-                                <p class="m-0 font-color-1">12:06</p>
-                            </div>
-                            <div class="chat-item">
-                                <h6 class="m-0">Ho intenzione di partire per le 14:00</h6>
-                                <p class="m-0 font-color-1">12:06</p>
+                            <div v-for="message in contacts[activeContactIndex].messages" class="chat-item" :class="{'sent-message' : message.status === 'sent'}">
+                                <h6 class="m-0">{{message.message}}</h6>
+                                <p class="m-0 font-color-1">{{message.date}}</p>
                             </div>
                         </div>
 
