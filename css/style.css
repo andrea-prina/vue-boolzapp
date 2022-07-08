@@ -57,7 +57,7 @@
     font-size: 1.5rem;
 }
 
-p, a, .col-4 .form-control {
+p, a, .col-4 .form-control, .msg-dropdown-botton {
     font-size: 0.75rem;
 }
 
@@ -141,4 +141,19 @@ p, a, .col-4 .form-control {
 
 .chat-item p {
     text-align: right;
+}
+
+.msg-dropdown {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.msg-dropdown-botton {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+h6 {
+    word-wrap: break-word;
 }
