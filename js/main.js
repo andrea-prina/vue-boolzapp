@@ -213,8 +213,19 @@ const app = new Vue(
 
             searchContact : function(index){
                 const contactName = this.contacts[index].name.toLowerCase();
-                const searchedName = this.searchQuery.toLowerCase()
+                const searchedName = this.searchQuery.toLowerCase();
                 return (contactName.startsWith(searchedName));
+            },
+
+            deleteMessage : function(index){
+
+                this.contacts[this.activeContactIndex].messages[index].message = "You deleted this message";
+                this.contacts[this.activeContactIndex].messages[index].date = "";
+
+
+                // IT IS ALSO POSSIBLE TO COMPLETELY REMOVE THE MESSAGE FROM THE CHAT USING:
+                // this.contacts[this.activeContactIndex].messages.splice(index, 1);
+
             }
         }
     }

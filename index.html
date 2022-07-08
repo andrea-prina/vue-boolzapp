@@ -104,7 +104,7 @@
                         </div>
                         
                         <div id="chat" class="d-flex flex-column overflow-scroll">
-                            <div v-for="message in contacts[activeContactIndex].messages" class="chat-item position-relative" :class="{'sent-message' : message.status === 'sent'}">
+                            <div v-for="(message, index) in contacts[activeContactIndex].messages" class="chat-item position-relative" :class="{'sent-message' : message.status === 'sent'}">
                                 <h6 class="m-0">{{message.message}}</h6>
                                 <p class="m-0 font-color-1">{{message.date}}</p>
                                 <div class="dropdown msg-dropdown">
@@ -113,7 +113,7 @@
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                         <li><button class="dropdown-item" type="button">Message info</button></li>
-                                        <li><button class="dropdown-item" type="button">Delete message</button></li>
+                                        <li><button @click="deleteMessage(index)" class="dropdown-item" type="button">Delete message</button></li>
                                     </ul>
                                 </div>
                             </div>
