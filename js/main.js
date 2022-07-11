@@ -220,13 +220,14 @@ const app = new Vue(
                 return (contactName.includes(searchedName));
             },
 
+
             deleteMessage : function(index){
 
                 this.contacts[this.activeContactIndex].messages[index].message = "You deleted this message";
                 this.contacts[this.activeContactIndex].messages[index].date = "";
 
 
-                // IT IS ALSO POSSIBLE TO COMPLETELY REMOVE THE MESSAGE FROM THE CHAT USING:
+                // IT IS ALSO POSSIBLE TO COMPLETELY REMOVE THE MESSAGE FROM THE CHAT USING (OR USING THE PROPERTY "VISIBLE"):
                 // this.contacts[this.activeContactIndex].messages.splice(index, 1);
 
             },
@@ -238,23 +239,39 @@ const app = new Vue(
                 return americanDate;
             },
             
+        
+            getLastMessageDateAndTime : function(messageList){
+                const receivedMessages = this.filterReceivedMessages(messageList);
+                const lastMessageDatetime = receivedMessages[receivedMessages.length - 1].date;
+                if (lastMessageDatetime != ""){
+                    let currentDate = dayjs(lastMessageDatetime).format("DD/MM/YY");
+                    if (currentDate == dayjs().format("DD/MM/YY")){
+                        currentDate = "oggi";
+                    }
+                    const currentTime = this.datetimeFormatToHourAndMinutes(dayjs(lastMessageDatetime));
+                    return [currentDate, currentTime];
+                }
+                
+            },
+            
+
             datetimeFormatToHourAndMinutes : function(datetime){
                 if (datetime != ""){
                     return dayjs(datetime).format("HH:mm");
                 }
             },
 
-            getLastMessageDate : function(datetime){
-                if (datetime != ""){
-                    let currentDate = dayjs(datetime).format("DD/MM/YY");
-                    if (currentDate == dayjs().format("DD/MM/YY")){
-                        currentDate = "oggi";
-                    }
 
-                    return currentDate;
-                }
+            filterReceivedMessages : function(messageList){
+                const receivedMessages = messageList.filter((element) => {
+                    if (element.status == "received"){
+                        return true
+                    };
+                })
+                return receivedMessages;
             }
         },
+
 
         created() {
             for (let i = 0; i < this.contacts.length; i++){

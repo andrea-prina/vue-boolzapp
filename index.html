@@ -91,8 +91,8 @@
                                     <div class="ps-3">
                                         <h6 class="m-0">{{contacts[activeContactIndex].name}}</h6>
                                         <p class="m-0">
-                                            Ultimo accesso il {{getLastMessageDate(contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length - 1].date)}}
-                                            alle {{datetimeFormatToHourAndMinutes(contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length - 1].date)}}
+                                            Ultimo accesso il {{getLastMessageDateAndTime(contacts[activeContactIndex].messages)[0]}}
+                                            alle {{getLastMessageDateAndTime(contacts[activeContactIndex].messages)[1]}}
                                         </p>
                                     </div>
                                 </div>
