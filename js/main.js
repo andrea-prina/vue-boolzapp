@@ -183,21 +183,23 @@ const app = new Vue(
 
             sendUserMessage : function(userMessage){
                 
-                const sendingTimestamp = dayjs();
-                const newMessage = {
+                if(userMessage != ""){
+                    const sendingTimestamp = dayjs();
+                    const newMessage = {
 
-                    date: sendingTimestamp,
-                    message : userMessage,
-                    status : 'sent'
+                        date: sendingTimestamp,
+                        message : userMessage,
+                        status : 'sent'
+                    }
+
+                    this.contacts[this.activeContactIndex].messages.push(newMessage);
+
+                    this.userMessage = "";
+
+                    setTimeout(() => {
+                        this.sendAutoReply();
+                    }, 1000)
                 }
-
-                this.contacts[this.activeContactIndex].messages.push(newMessage);
-
-                this.userMessage = "";
-
-                setTimeout(() => {
-                    this.sendAutoReply();
-                }, 1000)
             },
 
             sendAutoReply : function(){
