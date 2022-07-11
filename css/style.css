@@ -161,3 +161,12 @@ p, a, .col-4 .form-control, .msg-dropdown-botton {
 h6 {
     word-wrap: break-word;
 }
+
+.active-contact p {
+    display: none;
+}
+
+.active-contact:hover p {
+    display: block;
+    transition: all 0.5s linear;
+}

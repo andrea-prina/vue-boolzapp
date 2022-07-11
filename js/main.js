@@ -222,14 +222,7 @@ const app = new Vue(
 
 
             deleteMessage : function(index){
-
-                this.contacts[this.activeContactIndex].messages[index].message = "You deleted this message";
-                this.contacts[this.activeContactIndex].messages[index].date = "";
-
-
-                // IT IS ALSO POSSIBLE TO COMPLETELY REMOVE THE MESSAGE FROM THE CHAT USING (OR USING THE PROPERTY "VISIBLE"):
-                // this.contacts[this.activeContactIndex].messages.splice(index, 1);
-
+                this.contacts[this.activeContactIndex].messages[index].status = "deleted";
             },
 
             

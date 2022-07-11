@@ -85,7 +85,7 @@
 
                         <div class="d-flex justify-content-between p-2 bgc-1 align-items-center ms_h-60">
                             <div>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center active-contact">
                                     <!-- ACTIVE CHAT CONTACT | PROFILE PICTURE & NAME -->
                                     <img class="rounded-circle small-icon" :src="`./img/avatar${contacts[activeContactIndex].avatar}.jpg`" :alt="`avatar${contacts[activeContactIndex].avatar}`">
                                     <div class="ps-3">
@@ -105,10 +105,10 @@
                         </div>
                         
                         <div id="chat" class="d-flex flex-column overflow-scroll">
-                            <div v-for="(message, index) in contacts[activeContactIndex].messages" class="chat-item position-relative" :class="{'sent-message' : message.status === 'sent'}">
+                            <div v-if="message.status != 'deleted'" v-for="(message, index) in contacts[activeContactIndex].messages" class="chat-item position-relative" :class="{'sent-message' : message.status === 'sent'}">
                                 <h6 class="m-0">{{message.message}}</h6>
                                 <p class="m-0 font-color-1">{{datetimeFormatToHourAndMinutes(message.date)}}</p>
-                                <div class="dropdown msg-dropdown">
+                                <div v-if="message.status != 'received'" class="dropdown msg-dropdown">
                                     <button type="button" class="msg-dropdown-botton font-color-2" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </button>
