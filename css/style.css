@@ -111,6 +111,10 @@ p, a, .col-4 .form-control, .msg-dropdown-botton {
     background-color: var(--custom-color4);
 }
 
+#contacts-list li:hover {
+    background-color: var(--custom-color4);
+}
+
 .sent-message {
     align-self: end;
     background-color: var(--custom-color6);
