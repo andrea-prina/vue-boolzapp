@@ -106,7 +106,7 @@
                         
                         <div id="chat" class="d-flex flex-column overflow-scroll">
                             <div v-if="message.status != 'deleted'" v-for="(message, index) in contacts[activeContactIndex].messages" class="chat-item position-relative" :class="{'sent-message' : message.status === 'sent'}">
-                                <h6 class="m-0">{{message.message}}</h6>
+                                <h6 class="m-0 pe-2">{{message.message}}</h6>
                                 <p class="m-0 font-color-1">{{datetimeFormatToHourAndMinutes(message.date)}}</p>
                                 <div v-if="message.status != 'received'" class="dropdown msg-dropdown">
                                     <button type="button" class="msg-dropdown-botton font-color-2" data-bs-toggle="dropdown" aria-expanded="false">
