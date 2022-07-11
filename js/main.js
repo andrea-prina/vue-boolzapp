@@ -217,7 +217,7 @@ const app = new Vue(
             searchContact : function(index){
                 const contactName = this.contacts[index].name.toLowerCase();
                 const searchedName = this.searchQuery.toLowerCase();
-                return (contactName.startsWith(searchedName));
+                return (contactName.includes(searchedName));
             },
 
             deleteMessage : function(index){
@@ -243,7 +243,7 @@ const app = new Vue(
                     return dayjs(datetime).format("HH:mm");
                 }
             },
-            
+
             getLastMessageDate : function(datetime){
                 if (datetime != ""){
                     let currentDate = dayjs(datetime).format("DD/MM/YY");
