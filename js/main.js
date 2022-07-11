@@ -197,7 +197,7 @@ const app = new Vue(
 
                 setTimeout(() => {
                     this.sendAutoReply();
-                }, "1000")
+                }, 1000)
             },
 
             sendAutoReply : function(){
@@ -233,6 +233,21 @@ const app = new Vue(
 
             datetimeFormatToHourAndMinutes : function(datetime){
                 return dayjs(datetime).format("HH:mm")
+            },
+
+            frenchToAmericanDateConversion : function(datetime){
+                const datePortion = datetime.split(" ")[0];
+                const americanDate = datePortion.split("/")[1] + "/" + datePortion.split("/")[0] + "/" + datePortion.split("/")[2] + " " + datetime.split(" ")[1];
+                return americanDate;
+            }
+        },
+
+        created() {
+            for (let i = 0; i < this.contacts.length; i++){
+                const messagesList = this.contacts[i].messages
+                for (let i = 0; i < messagesList.length; i++){
+                    messagesList[i].date = this.frenchToAmericanDateConversion(messagesList[i].date);
+                }
             }
         }
     }
