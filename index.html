@@ -90,7 +90,10 @@
                                     <img class="rounded-circle small-icon" :src="`./img/avatar${contacts[activeContactIndex].avatar}.jpg`" :alt="`avatar${contacts[activeContactIndex].avatar}`">
                                     <div class="ps-3">
                                         <h6 class="m-0">{{contacts[activeContactIndex].name}}</h6>
-                                        <p class="m-0">Ultimo accesso oggi alle 12:00</p>
+                                        <p class="m-0">
+                                            Ultimo accesso il {{getLastMessageDate(contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length - 1].date)}}
+                                            alle {{datetimeFormatToHourAndMinutes(contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length - 1].date)}}
+                                        </p>
                                     </div>
                                 </div>
                             </div>

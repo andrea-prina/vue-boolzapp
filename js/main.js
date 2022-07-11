@@ -231,14 +231,28 @@ const app = new Vue(
 
             },
 
-            datetimeFormatToHourAndMinutes : function(datetime){
-                return dayjs(datetime).format("HH:mm")
-            },
-
+            
             frenchToAmericanDateConversion : function(datetime){
                 const datePortion = datetime.split(" ")[0];
                 const americanDate = datePortion.split("/")[1] + "/" + datePortion.split("/")[0] + "/" + datePortion.split("/")[2] + " " + datetime.split(" ")[1];
                 return americanDate;
+            },
+            
+            datetimeFormatToHourAndMinutes : function(datetime){
+                if (datetime != ""){
+                    return dayjs(datetime).format("HH:mm");
+                }
+            },
+            
+            getLastMessageDate : function(datetime){
+                if (datetime != ""){
+                    let currentDate = dayjs(datetime).format("DD/MM/YY");
+                    if (currentDate == dayjs().format("DD/MM/YY")){
+                        currentDate = "oggi";
+                    }
+
+                    return currentDate;
+                }
             }
         },
 
